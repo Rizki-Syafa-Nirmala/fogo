@@ -23,7 +23,7 @@ class Makanan extends Model
         return $this->belongsTo(Kategori::class);
     }
 
-    public function mitras()
+    public function mitra()
     {
         return $this->belongsTo(Mitra::class);
     }
@@ -37,5 +37,4 @@ class Makanan extends Model
     {
         return $this->hasMany(Ulasan::class);
     }
-    
 }

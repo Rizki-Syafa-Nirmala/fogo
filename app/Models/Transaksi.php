@@ -6,13 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Transaksi extends Model
 {
-    protected $fillable = 
+    protected $fillable =
     [
         'user_id',
         'makanan_id',
         'mitra_id',
         'total_harga',
-        'status'
+        'order_id',
+        'status',
+        'status_pembayaran',
+        'snap_token',
     ];
 
     public function user()
@@ -34,4 +37,8 @@ class Transaksi extends Model
     {
         return $this->hasOne(Ulasan::class);
     }
+
+    // protected $casts = [
+    //     'total_harga' => 'decimal:2',
+    // ];
 }

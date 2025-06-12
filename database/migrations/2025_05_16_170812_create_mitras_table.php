@@ -18,6 +18,10 @@ return new class extends Migration
             $table->string('password');
             $table->string('deskripsi')->nullable();
             $table->string('alamat')->nullable();
+            $table->string('no_telp')->nullable();
+            $table->string('kota')->nullable();
+            $table->float('latitude', 10, 6)->nullable();
+            $table->float('longitude', 10, 6)->nullable();
             $table->timestamps();
         });
     }
